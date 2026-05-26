@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal and professional portfolio for Ogah Divine, showcasing projects, services, experience, and contact details.">
+  <meta property="og:title" content="Ogah Divine | Frontend Developer Portfolio">
+  <meta property="og:description" content="Explore Ogah Divine's portfolio, services, projects, tech stack, and contact details.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#071527">
+  <title>Ogah Divine | Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071527'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%2338bdf8'%3EOD%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="preloader" aria-label="Loading portfolio">
+    <div>
+      <span>OD</span>
+      <p>Loading portfolio</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Ogah Divine home">
+      <span class="brand-mark">OD</span>
+      <span>Ogah Divine</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Portfolio introduction">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85" alt="Modern work desk with laptop and creative tools">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Personal portfolio</p>
+        <h1 id="heroName">Ogah Divine</h1>
+        <p class="typing-line" aria-label="Professional roles">
+          <span id="typedRole">Frontend Developer</span>
+        </p>
+        <p class="hero-copy" id="heroCopy">I build clear, useful digital experiences for people and businesses that need a stronger presence online.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View Work</a>
+          <a class="button secondary" href="#contact">Start a Project</a>
+          <a class="button secondary" href="cv.html">View CV</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Professional focus">
+        <span>Available for freelance and full-time opportunities</span>
+        <strong>Web Design - Frontend Development - Brand Systems</strong>
+      </aside>
+    </section>
+
+    <section class="intro-band reveal" aria-label="Portfolio highlights">
+      <div>
+        <strong data-count="12" data-suffix="+">0</strong>
+        <span>Completed builds</span>
+      </div>
+      <div>
+        <strong data-count="4">0</strong>
+        <span>Core specialties</span>
+      </div>
+      <div>
+        <strong data-count="100" data-suffix="%">0</strong>
+        <span>Built with care</span>
+      </div>
+    </section>
+
+    <section class="section split-section reveal" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>A personal profile with a professional edge.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="portrait-wrap">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1000&q=85" alt="Professional workspace conversation">
+        </div>
+        <div class="about-copy">
+          <p>I am a web creator focused on helping brands, founders, and professionals communicate clearly online. My work blends clean design, responsive layouts, thoughtful content, and practical development.</p>
+          <p>This portfolio is set up so your strongest story can lead: who you are, what you do, what you have built, and how people can work with you.</p>
+          <div class="tag-list" aria-label="Skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UI Design</span>
+            <span>Responsive Web</span>
+            <span>Branding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="work">
+      <div class="section-top">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects shaped for real business needs.</h2>
+        </div>
+        <div class="project-tools">
+          <div class="filters" aria-label="Project filters">
+            <button class="filter-button active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="web">Web</button>
+            <button class="filter-button" type="button" data-filter="brand">Brand</button>
+            <button class="filter-button" type="button" data-filter="product">Product</button>
+          </div>
+          <div class="slider-controls" aria-label="Project slider controls">
+            <button class="slider-button" type="button" data-slide="prev" aria-label="Previous project">
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <button class="slider-button" type="button" data-slide="next" aria-label="Next project">
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-slider" aria-label="Project slider">
+        <article class="project-card" data-category="web" data-project-title="Personal Portfolio Website" data-project-type="Portfolio" data-project-tools="HTML, CSS, JavaScript" data-project-details="A personal portfolio website built to showcase skills, projects, services, social links, contact options, and a professional CV page.">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85" alt="Analytics dashboard on laptop">
+          <div>
+            <p>Portfolio</p>
+            <h3>Personal Portfolio Website</h3>
+            <span>A clean personal website for presenting skills, projects, services, and contact details.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>Case Study Soon</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-category="brand" data-project-title="React Developer Profile" data-project-type="React Developer" data-project-tools="React, Components, Responsive UI" data-project-details="A developer profile concept focused on reusable frontend components, clean interface sections, and a responsive layout for modern portfolios.">
+          <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=1000&q=85" alt="Brand design materials on a desk">
+          <div>
+            <p>React Developer</p>
+            <h3>React Developer Profile</h3>
+            <span>A developer-focused project highlighting reusable components, responsive UI, and frontend skills.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>GitHub Soon</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-category="product" data-project-title="Ecommerce Website" data-project-type="Ecommerce" data-project-tools="HTML, CSS, JavaScript, Product UI" data-project-details="An ecommerce website concept with product sections, clear navigation, mobile-friendly browsing, and a conversion-focused shopping layout.">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85" alt="Product metrics dashboard">
+          <div>
+            <p>Ecommerce</p>
+            <h3>Ecommerce Website</h3>
+            <span>An online shopping website concept with product sections, clear navigation, and conversion-focused layout.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>Demo Soon</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-category="product" data-project-title="Todo App" data-project-type="Productivity App" data-project-tools="JavaScript, Local UI, Task Flow" data-project-details="A simple productivity application concept for creating tasks, organizing work, and tracking daily progress with a clean user interface.">
+          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1000&q=85" alt="Todo list notebook and workspace">
+          <div>
+            <p>Productivity App</p>
+            <h3>Todo App</h3>
+            <span>A simple task management app for creating, organizing, and tracking daily work.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>Demo Soon</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-category="brand" data-project-title="UI/UX Project" data-project-type="UI/UX Design" data-project-tools="Wireframes, User Flows, Visual Design" data-project-details="A UI/UX-focused project built around clear user flows, readable layouts, and attractive screen design for web and mobile experiences.">
+          <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1000&q=85" alt="UI UX design sketches and interface planning">
+          <div>
+            <p>UI/UX Design</p>
+            <h3>UI/UX Project</h3>
+            <span>A user interface and experience design project focused on clean flows and usable screens.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>Case Study Soon</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" data-category="web" data-project-title="School Website" data-project-type="School Website" data-project-tools="HTML, CSS, JavaScript, Information Architecture" data-project-details="A responsive school website concept for programs, admission information, announcements, departments, and contact details.">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85" alt="Students studying together with laptops">
+          <div>
+            <p>School Website</p>
+            <h3>School Website</h3>
+            <span>A responsive school website for sharing information, programs, admission details, and updates.</span>
+            <div class="project-actions">
+              <button type="button" class="project-detail-button">View Details</button>
+              <a href="#contact">Request Similar</a>
+              <span>Demo Soon</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tech-section reveal" aria-label="Technology stack">
+      <div class="section-heading">
+        <p class="eyebrow">Tech stack</p>
+        <h2>Tools I use to turn ideas into working websites.</h2>
+      </div>
+      <div class="tech-grid">
+        <article>
+          <strong>HTML</strong>
+          <span>Structure</span>
+        </article>
+        <article>
+          <strong>CSS</strong>
+          <span>Styling</span>
+        </article>
+        <article>
+          <strong>JS</strong>
+          <span>Interaction</span>
+        </article>
+        <article>
+          <strong>React</strong>
+          <span>Frontend</span>
+        </article>
+        <article>
+          <strong>UI/UX</strong>
+          <span>Design</span>
+        </article>
+        <article>
+          <strong>Git</strong>
+          <span>Workflow</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="services-band reveal" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>Support from first impression to launch.</h2>
+      </div>
+      <div class="service-grid">
+        <article>
+          <span>01</span>
+          <h3>Portfolio Websites</h3>
+          <p>Personal sites that present your story, work, achievements, and contact path with confidence.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Business Landing Pages</h3>
+          <p>Clear pages for offers, services, campaigns, and small businesses that need trust quickly.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Frontend Builds</h3>
+          <p>Responsive HTML, CSS, and JavaScript interfaces with polished details and solid structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="packages-section reveal" aria-label="Service packages">
+      <div class="section-heading">
+        <p class="eyebrow">Packages</p>
+        <h2>Clear options for different website goals.</h2>
+      </div>
+      <div class="packages-grid">
+        <article>
+          <span>Starter</span>
+          <h3>Portfolio Website</h3>
+          <p>Best for students, creatives, developers, and professionals who need a strong personal presence.</p>
+          <ul>
+            <li>Responsive single-page website</li>
+            <li>About, projects, services, and contact</li>
+            <li>Social links and WhatsApp contact</li>
+          </ul>
+          <a class="button primary" href="#contact">Request Package</a>
+        </article>
+        <article class="featured-package">
+          <span>Popular</span>
+          <h3>Business Website</h3>
+          <p>Best for brands, small businesses, schools, and service providers that need a polished online home.</p>
+          <ul>
+            <li>Multi-section business layout</li>
+            <li>Service pages and contact form</li>
+            <li>SEO-ready structure</li>
+          </ul>
+          <a class="button primary" href="#contact">Request Package</a>
+        </article>
+        <article>
+          <span>Advanced</span>
+          <h3>Ecommerce Website</h3>
+          <p>Best for product-based businesses that need product sections, shopping flow, and conversion-focused design.</p>
+          <ul>
+            <li>Product showcase sections</li>
+            <li>Modern shopping layout</li>
+            <li>Mobile-first customer experience</li>
+          </ul>
+          <a class="button primary" href="#contact">Request Package</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>A steady process for sharper outcomes.</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>Discover</span>
+          <p>Clarify goals, audience, pages, and the message the site needs to carry.</p>
+        </article>
+        <article>
+          <span>Design</span>
+          <p>Shape the layout, visual direction, content hierarchy, and responsive behavior.</p>
+        </article>
+        <article>
+          <span>Build</span>
+          <p>Develop clean pages, test across screen sizes, and prepare the site for launch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials-section reveal" aria-label="Testimonials">
+      <div class="section-heading">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What people can expect when working with me.</h2>
+      </div>
+      <div class="testimonial-grid" id="testimonialGrid">
+        <article>
+          <p>"Divine creates clean, responsive websites and pays attention to the small details that make a page feel professional."</p>
+          <strong>Client Feedback</strong>
+        </article>
+        <article>
+          <p>"The design process was clear, fast, and easy to follow. The final website looked modern on both mobile and desktop."</p>
+          <strong>Project Review</strong>
+        </article>
+        <article>
+          <p>"A reliable frontend developer with a good eye for layout, spacing, and user-friendly design."</p>
+          <strong>Collaboration Note</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section reveal" aria-label="Frequently asked questions">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Quick answers before we start.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What kind of websites do you build?</summary>
+          <p>I build portfolio websites, business websites, school websites, ecommerce layouts, React projects, and UI/UX-focused interfaces.</p>
+        </details>
+        <details>
+          <summary>Can you make the website work on phones?</summary>
+          <p>Yes. Every website is designed to be responsive so it works well on mobile, tablet, and desktop screens.</p>
+        </details>
+        <details>
+          <summary>How can someone contact you?</summary>
+          <p>They can use the contact form, send a message through WhatsApp, or reach out through Instagram, X, or Facebook.</p>
+        </details>
+        <details>
+          <summary>Can you update this portfolio later?</summary>
+          <p>Yes. New projects, images, testimonials, CV details, and links can be added whenever your work grows.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact-section reveal" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something with purpose.</h2>
+        <p>Use this section for your email, WhatsApp, Instagram, X, or any preferred contact channel.</p>
+      </div>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/ogahdivine001@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="New portfolio inquiry for Ogah Divine">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Send Message</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+        <p class="contact-fallback">Form not working? <a href="https://wa.me/2348132196409" target="_blank" rel="noreferrer">Message me on WhatsApp</a>.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> Ogah Divine. All rights reserved.</span>
+    <div class="social-links" aria-label="Social media links">
+      <a id="instagramLink" href="https://www.instagram.com/ogahdivine2008/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M7.8 2.75h8.4a5.06 5.06 0 0 1 5.05 5.05v8.4a5.06 5.06 0 0 1-5.05 5.05H7.8a5.06 5.06 0 0 1-5.05-5.05V7.8A5.06 5.06 0 0 1 7.8 2.75Zm8.4 16.88a3.43 3.43 0 0 0 3.43-3.43V7.8a3.43 3.43 0 0 0-3.43-3.43H7.8A3.43 3.43 0 0 0 4.37 7.8v8.4a3.43 3.43 0 0 0 3.43 3.43h8.4ZM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5Zm0 7.88a3.13 3.13 0 1 0 0-6.26 3.13 3.13 0 0 0 0 6.26Zm5.08-8.36a1.11 1.11 0 1 1 0 2.22 1.11 1.11 0 0 1 0-2.22Z"/>
+        </svg>
+      </a>
+      <a id="xLink" href="https://x.com/DivineOgah2008" target="_blank" rel="noreferrer" aria-label="X">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.65 11.13L2.22 22h1.73l6.69-7.77L15.99 22h5.82l-7.95-11.53Zm-2.37 2.75-.78-1.11L4.55 3.3h2.66l4.97 7.11.78 1.11 6.47 9.25h-2.66l-5.28-7.55Z"/>
+        </svg>
+      </a>
+      <a id="facebookLink" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M13.55 22v-8.92h3l.45-3.48h-3.45V7.38c0-1.01.28-1.69 1.72-1.69h1.84V2.58A24.64 24.64 0 0 0 14.43 2c-2.65 0-4.47 1.62-4.47 4.59V9.6h-3v3.48h3V22h3.59Z"/>
+        </svg>
+      </a>
+      <a href="admin.html" aria-label="Admin login">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 2.75 4.25 6.19v5.17c0 4.79 3.31 9.28 7.75 10.39 4.44-1.11 7.75-5.6 7.75-10.39V6.19L12 2.75Zm0 1.64 6.25 2.78v4.19c0 3.99-2.62 7.75-6.25 8.84-3.63-1.09-6.25-4.85-6.25-8.84V7.17L12 4.39Zm0 4.11a2.5 2.5 0 0 0-2.5 2.5v.9a1.5 1.5 0 0 0-1 1.41v2.19c0 .83.67 1.5 1.5 1.5h4c.83 0 1.5-.67 1.5-1.5v-2.19a1.5 1.5 0 0 0-1-1.41V11A2.5 2.5 0 0 0 12 8.5Zm0 1.5c.55 0 1 .45 1 1v.81h-2V11c0-.55.45-1 1-1Z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/2348132196409" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M12.04 2.5A9.43 9.43 0 0 0 2.6 11.92c0 1.66.44 3.28 1.27 4.71l-1.35 4.91 5.03-1.32a9.41 9.41 0 0 0 4.49 1.14h.01a9.43 9.43 0 0 0-.01-18.86Zm0 17.25h-.01a7.82 7.82 0 0 1-3.99-1.09l-.29-.17-2.98.78.8-2.91-.19-.3a7.79 7.79 0 0 1-1.2-4.14 7.86 7.86 0 1 1 7.86 7.83Zm4.31-5.86c-.24-.12-1.39-.69-1.6-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.37-1.91-1.18-.71-.63-1.18-1.4-1.32-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.39-.57 1.59-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z"/>
+    </svg>
+  </a>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <span aria-hidden="true">&#8593;</span>
+  </button>
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close project details">&times;</button>
+      <p class="eyebrow" id="modalType">Project</p>
+      <h2 id="modalTitle">Project Title</h2>
+      <p id="modalDetails"></p>
+      <div class="modal-tools">
+        <strong>Tools</strong>
+        <span id="modalTools"></span>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#contact">Request Similar</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

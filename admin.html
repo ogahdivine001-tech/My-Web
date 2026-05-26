@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure admin login page for Ogah Divine's portfolio.">
+  <meta name="theme-color" content="#071527">
+  <title>Admin Login | Ogah Divine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="admin-page">
+    <section class="admin-card">
+      <a class="brand admin-brand" href="index.html" aria-label="Back to portfolio">
+        <span class="brand-mark">OD</span>
+        <span>Ogah Divine</span>
+      </a>
+
+      <div>
+        <p class="eyebrow">Admin area</p>
+        <h1>Login</h1>
+        <p class="admin-note">Login with your Firebase admin account. Passwords are handled securely by Firebase and are not saved in this website.</p>
+      </div>
+
+      <form class="admin-form" id="adminForm">
+        <label>
+          Email
+          <input type="email" name="email" placeholder="ogahdivine001@gmail.com" required>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" placeholder="Your secure password" required minlength="8">
+        </label>
+        <button class="button primary" type="submit">Login</button>
+        <p class="form-status" id="adminStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="admin-dashboard" id="adminDashboard" hidden>
+        <h2>Dashboard Preview</h2>
+        <p>You are signed in as admin. Edit your live portfolio content below and save it to Firebase.</p>
+        <form class="editor-form" id="contentForm">
+          <fieldset>
+            <legend>Hero Content</legend>
+            <label>
+              Display Name
+              <input type="text" name="heroName" placeholder="Ogah Divine" required>
+            </label>
+            <label>
+              Hero Description
+              <textarea name="heroCopy" rows="4" placeholder="Short description for the hero section" required></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Social Links</legend>
+            <label>
+              Instagram URL
+              <input type="url" name="instagramUrl" placeholder="https://www.instagram.com/yourname">
+            </label>
+            <label>
+              X URL
+              <input type="url" name="xUrl" placeholder="https://x.com/yourname">
+            </label>
+            <label>
+              Facebook URL
+              <input type="url" name="facebookUrl" placeholder="https://www.facebook.com/yourname">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Testimonials</legend>
+            <label>
+              Testimonial 1
+              <textarea name="testimonial1" rows="3"></textarea>
+            </label>
+            <label>
+              Testimonial 1 Name
+              <input type="text" name="testimonialName1">
+            </label>
+            <label>
+              Testimonial 2
+              <textarea name="testimonial2" rows="3"></textarea>
+            </label>
+            <label>
+              Testimonial 2 Name
+              <input type="text" name="testimonialName2">
+            </label>
+            <label>
+              Testimonial 3
+              <textarea name="testimonial3" rows="3"></textarea>
+            </label>
+            <label>
+              Testimonial 3 Name
+              <input type="text" name="testimonialName3">
+            </label>
+          </fieldset>
+
+          <button class="button primary" type="submit">Save Website Updates</button>
+          <p class="form-status" id="contentStatus" aria-live="polite"></p>
+        </form>
+        <div class="admin-actions">
+          <a class="button secondary" href="index.html">View Website</a>
+          <button class="button primary" type="button" id="logoutButton">Logout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
