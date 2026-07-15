@@ -41,10 +41,14 @@ const heroCopy = document.querySelector("#heroCopy");
 const testimonialGrid = document.querySelector("#testimonialGrid");
 const instagramLink = document.querySelector("#instagramLink");
 const xLink = document.querySelector("#xLink");
-const facebookLink = document.querySelector("#facebookLink");
 const year = document.querySelector("#year");
 const savedTheme = localStorage.getItem("portfolioTheme");
-const roles = ["Frontend Developer", "React Developer", "UI/UX Designer", "Website Builder"];
+const roles = [
+  "Frontend Developer",
+  "React Developer",
+  "UI/UX Designer",
+  "Website Builder",
+];
 let roleIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
@@ -91,10 +95,6 @@ const applySiteContent = (content) => {
     xLink.href = content.xUrl;
   }
 
-  if (content.facebookUrl) {
-    facebookLink.href = content.facebookUrl;
-  }
-
   renderTestimonials(content.testimonials);
 };
 
@@ -106,7 +106,9 @@ const loadSiteContent = async () => {
       applySiteContent(snapshot.data());
     }
   } catch (error) {
-    console.warn("Using static portfolio content because Firestore content could not be loaded.");
+    console.warn(
+      "Using static portfolio content because Firestore content could not be loaded.",
+    );
   }
 };
 
@@ -133,7 +135,10 @@ year.textContent = new Date().getFullYear();
 const syncThemeToggle = () => {
   const isLight = document.body.classList.contains("light-theme");
   themeToggle.setAttribute("aria-pressed", String(isLight));
-  themeToggle.setAttribute("aria-label", isLight ? "Switch to dark blue theme" : "Switch to light theme");
+  themeToggle.setAttribute(
+    "aria-label",
+    isLight ? "Switch to dark blue theme" : "Switch to light theme",
+  );
 };
 
 if (savedTheme === "light") {
@@ -159,7 +164,7 @@ const revealObserver = new IntersectionObserver(
   },
   {
     threshold: 0.16,
-  }
+  },
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
@@ -195,7 +200,7 @@ const counterObserver = new IntersectionObserver(
   },
   {
     threshold: 0.6,
-  }
+  },
 );
 
 counters.forEach((counter) => counterObserver.observe(counter));
@@ -255,9 +260,11 @@ contactForm.addEventListener("submit", async (event) => {
     }
 
     contactForm.reset();
-    formStatus.textContent = "Message sent successfully. I will get back to you soon.";
+    formStatus.textContent =
+      "Message sent successfully. I will get back to you soon.";
   } catch (error) {
-    formStatus.textContent = "Message could not be sent. Please activate the form email or chat on WhatsApp.";
+    formStatus.textContent =
+      "Message could not be sent. Please activate the form email or chat on WhatsApp.";
     formStatus.classList.add("is-error");
   } finally {
     submitButton.disabled = false;
@@ -295,8 +302,12 @@ filterButtons.forEach((button) => {
 
 sliderButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const visibleCard = [...projectCards].find((card) => !card.classList.contains("is-hidden"));
-    const cardWidth = visibleCard ? visibleCard.getBoundingClientRect().width + 18 : 320;
+    const visibleCard = [...projectCards].find(
+      (card) => !card.classList.contains("is-hidden"),
+    );
+    const cardWidth = visibleCard
+      ? visibleCard.getBoundingClientRect().width + 18
+      : 320;
     const direction = button.dataset.slide === "next" ? 1 : -1;
 
     projectSlider.scrollBy({

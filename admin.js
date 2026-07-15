@@ -67,7 +67,6 @@ const defaultContent = {
     "I build clear, useful digital experiences for people and businesses that need a stronger presence online.",
   instagramUrl: "https://www.instagram.com/ogahdivine2008/?hl=en",
   xUrl: "https://x.com/DivineOgah2008",
-  facebookUrl: "https://www.facebook.com/",
   testimonials: [
     {
       quote:
@@ -98,8 +97,6 @@ const fillContentForm = (content) => {
   contentForm.instagramUrl.value =
     content.instagramUrl || defaultContent.instagramUrl;
   contentForm.xUrl.value = content.xUrl || defaultContent.xUrl;
-  contentForm.facebookUrl.value =
-    content.facebookUrl || defaultContent.facebookUrl;
 
   const testimonials = content.testimonials || defaultContent.testimonials;
 
@@ -218,7 +215,6 @@ contentForm.addEventListener("submit", async (event) => {
     heroCopy: String(data.get("heroCopy")).trim(),
     instagramUrl: String(data.get("instagramUrl")).trim(),
     xUrl: String(data.get("xUrl")).trim(),
-    facebookUrl: String(data.get("facebookUrl")).trim(),
     testimonials,
     updatedAt: serverTimestamp(),
     updatedBy: auth.currentUser.email,
