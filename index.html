@@ -57,9 +57,10 @@
       </button>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -105,7 +106,7 @@
 
       <section class="intro-band reveal" aria-label="Portfolio highlights">
         <div>
-          <strong data-count="5" data-suffix="+">0</strong>
+          <strong data-count="10" data-suffix="+">0</strong>
           <span>Completed builds</span>
         </div>
         <div>
@@ -126,8 +127,8 @@
         <div class="about-grid">
           <div class="portrait-wrap">
             <img
-              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1000&q=85"
-              alt="Professional workspace conversation"
+              src="images/profile-photo.jpg"
+              alt="Ogah Divine, frontend developer"
               loading="lazy"
             />
           </div>
@@ -143,14 +144,7 @@
               are, what you do, what you have built, and how people can work
               with you.
             </p>
-            <div class="tag-list" aria-label="Skills">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>UI Design</span>
-              <span>Responsive Web</span>
-              <span>Branding</span>
-            </div>
+            <a class="button primary" href="#skills">See My Skills</a>
           </div>
         </div>
       </section>
@@ -204,6 +198,39 @@
         <div class="project-slider" aria-label="Project slider">
           <article
             class="project-card"
+            data-category="product"
+            data-project-title="Verve"
+            data-project-type="E-commerce Platform"
+            data-project-tools="React, Node.js, Express, MongoDB, Paystack, Cloudinary"
+            data-project-details="A full-stack e-commerce platform with product catalog, cart, wishlist, secure Paystack checkout, order tracking, and a full admin dashboard for managing products and analytics."
+          >
+            <img
+              src="images/verve.jpg"
+              alt="Verve e-commerce store homepage"
+              loading="lazy"
+            />
+            <div>
+              <p>E-commerce Platform</p>
+              <h3>Verve</h3>
+              <span
+                >A full-stack online store with secure checkout, order tracking,
+                and a complete admin dashboard.</span
+              >
+              <div class="project-actions">
+                <button type="button" class="project-detail-button">
+                  View Details
+                </button>
+                <a
+                  href="https://vervestore.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live Site</a
+                >
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
             data-category="web"
             data-project-title="PrimeHomes"
             data-project-type="Real Estate Website"
@@ -244,7 +271,7 @@
             data-project-details="A full-stack school management web app covering student, teacher, admissions, results, news, events, gallery, and messaging modules, all connected to a live Firestore database."
           >
             <img
-              src="images/sacredtouchschools.jpg"
+              src="images/sacred-touch-schools.jpg"
               alt="Sacred Touch Schools website homepage"
               loading="lazy"
             />
@@ -260,7 +287,7 @@
                   View Details
                 </button>
                 <a
-                  href="https://sacredtouchschools.vercel.app"
+                  href="https://sacred-touch-schools.vercel.app"
                   target="_blank"
                   rel="noreferrer"
                   >Live Site</a
@@ -271,35 +298,40 @@
         </div>
       </section>
 
-      <section class="tech-section reveal" aria-label="Technology stack">
+      <section class="skills-section reveal" id="skills" aria-label="Skills">
         <div class="section-heading">
-          <p class="eyebrow">Tech stack</p>
-          <h2>Tools I use to turn ideas into working websites.</h2>
+          <p class="eyebrow">Skills</p>
+          <h2>What I bring to every build.</h2>
         </div>
-        <div class="tech-grid">
-          <article>
-            <strong>HTML</strong>
-            <span>Structure</span>
+        <div class="skills-grid">
+          <article class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Vite</span>
+              <span>Tailwind CSS</span>
+            </div>
           </article>
-          <article>
-            <strong>CSS</strong>
-            <span>Styling</span>
+          <article class="skill-category">
+            <h3>Backend &amp; Database</h3>
+            <div class="skill-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>Firebase</span>
+            </div>
           </article>
-          <article>
-            <strong>JS</strong>
-            <span>Interaction</span>
-          </article>
-          <article>
-            <strong>React</strong>
-            <span>Frontend</span>
-          </article>
-          <article>
-            <strong>UI/UX</strong>
-            <span>Design</span>
-          </article>
-          <article>
-            <strong>Git</strong>
-            <span>Workflow</span>
+          <article class="skill-category">
+            <h3>Tools &amp; Integrations</h3>
+            <div class="skill-tags">
+              <span>Git &amp; GitHub</span>
+              <span>Paystack</span>
+              <span>Cloudinary</span>
+              <span>UI/UX Design</span>
+            </div>
           </article>
         </div>
       </section>
@@ -388,33 +420,74 @@
         </div>
       </section>
 
-      <section class="section timeline-section reveal">
+      <section class="section timeline-section reveal" id="experience">
         <div class="section-heading">
           <p class="eyebrow">Experience</p>
-          <h2>A steady process for sharper outcomes.</h2>
+          <h2>My freelance journey so far.</h2>
         </div>
         <div class="timeline">
           <article>
-            <span>Discover</span>
+            <span>2023</span>
             <p>
-              Clarify goals, audience, pages, and the message the site needs to
-              carry.
+              Started freelance web development, self-taught through online
+              courses, documentation, and hands-on project building.
             </p>
           </article>
           <article>
-            <span>Design</span>
+            <span>2024</span>
             <p>
-              Shape the layout, visual direction, content hierarchy, and
-              responsive behavior.
+              Delivered early client projects, including PrimeHomes, a real
+              estate website, and Sacred Touch Schools, a school management
+              platform.
             </p>
           </article>
           <article>
-            <span>Build</span>
+            <span>2025 to 2026</span>
             <p>
-              Develop clean pages, test across screen sizes, and prepare the
-              site for launch.
+              Expanded into full-stack development, building complete platforms
+              such as Verve, an e-commerce site powered by Node.js, Express,
+              MongoDB, Paystack, and Cloudinary.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section class="section education-section reveal" id="education">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>Self-taught, project-driven learning.</h2>
+        </div>
+        <div class="education-card">
+          <p>
+            No formal computer science degree, my skills come from consistent,
+            hands-on learning. I've built my knowledge through a mix of online
+            courses, official documentation, developer communities, and real
+            client projects that forced me to solve actual problems rather than
+            just tutorials.
+          </p>
+          <div class="education-points">
+            <article>
+              <h3>Continuous learning</h3>
+              <p>
+                Ongoing study of modern frontend and backend practices through
+                official docs and courses.
+              </p>
+            </article>
+            <article>
+              <h3>Learn by building</h3>
+              <p>
+                Every skill was tested and sharpened on real, deployed client
+                projects, not just practice exercises.
+              </p>
+            </article>
+            <article>
+              <h3>Community driven</h3>
+              <p>
+                Staying current through developer communities, code reviews, and
+                shared resources.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
