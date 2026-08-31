@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-body bg-paper-50 text-ink-900 dark:bg-ink-950 dark:text-paper-50 transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-accent text-white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/40 rounded-full;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 dark:bg-ink-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-glass dark:shadow-glass-dark rounded-xl2;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-10;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-accent dark:text-accent-light font-bold;
+  }
+
+  .section-heading {
+    @apply font-display font-extrabold text-3xl md:text-4xl mt-2 mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-accent to-coral text-white font-semibold shadow-glass hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card font-semibold hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-coral bg-clip-text text-transparent;
+  }
+}
