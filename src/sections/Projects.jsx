@@ -1,16 +1,33 @@
 import { useState } from "react";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiImage } from "react-icons/fi";
 import RevealOnScroll from "../components/RevealOnScroll";
 import { projects } from "../data/projects";
 
-const images = import.meta.glob("../assets/images/*.jpg", {
+const imageFiles = import.meta.glob("../assets/images/*.jpg", {
+  eager: true,
+  import: "default",
+});
+const galleryFiles = import.meta.glob("../assets/gallery/*.jpg", {
   eager: true,
   import: "default",
 });
 
-const getImage = (name) => images[`../assets/images/${name}`];
+const getImage = (project) => {
+  const folder = project.imageFolder === "gallery" ? galleryFiles : imageFiles;
+  const base =
+    project.imageFolder === "gallery"
+      ? "../assets/gallery/"
+      : "../assets/images/";
+  return folder[`${base}${project.image}`];
+};
 
-const categories = ["All", "Web Development", "UI/UX", "Graphic Design", "Branding"];
+const categories = [
+  "All",
+  "Web Development",
+  "UI/UX",
+  "Graphic Design",
+  "Branding",
+];
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -55,8 +72,8 @@ export default function Projects() {
                 <div className="glass-card overflow-hidden group h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
                   <div className="overflow-hidden">
                     <img
-                      src={getImage(project.image)}
-                      alt={`${project.title} screenshot`}
+                      src={getImage(project)}
+                      alt={`${project.title} preview`}
                       loading="lazy"
                       className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
@@ -79,25 +96,36 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-3 mt-5">
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 text-center text-sm font-semibold px-4 py-2.5 rounded-full bg-gradient-to-r from-accent to-coral text-white flex items-center justify-center gap-2"
-                      >
-                        <FiExternalLink /> Live Demo
-                      </a>
-                      <a
-                        href={project.source}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="Source code"
-                        className="h-10 w-10 rounded-full glass-card flex items-center justify-center flex-shrink-0"
-                      >
-                        <FiGithub />
-                      </a>
-                    </div>
+                    {(project.live || project.source) && (
+                      <div className="flex gap-3 mt-5">
+                        {project.live && (
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex-1 text-center text-sm font-semibold px-4 py-2.5 rounded-full bg-gradient-to-r from-accent to-coral text-white flex items-center justify-center gap-2"
+                          >
+                            <FiExternalLink /> Live Demo
+                          </a>
+                        )}
+                        {project.source && (
+                          <a
+                            href={project.source}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Source code"
+                            className="h-10 w-10 rounded-full glass-card flex items-center justify-center flex-shrink-0"
+                          >
+                            <FiGithub />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                    {!project.live && !project.source && (
+                      <div className="flex items-center gap-2 mt-5 text-sm font-semibold text-accent dark:text-accent-light">
+                        <FiImage /> Design Work
+                      </div>
+                    )}
                   </div>
                 </div>
               </RevealOnScroll>

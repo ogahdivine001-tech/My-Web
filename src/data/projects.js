@@ -32,4 +32,34 @@ export const projects = [
     live: "https://primehomesestate.vercel.app",
     source: "https://github.com/ogahdivine001-tech",
   },
+  {
+    id: "glams-by-midhay",
+    title: "Glams by Midhay",
+    category: "Graphic Design",
+    description:
+      "A promotional flyer for a makeup and glam studio, covering bridal, birthday, and photoshoot looks.",
+    tech: ["Adobe Photoshop", "Flyer Design"],
+    image: "glams-by-midhay.jpg",
+    imageFolder: "gallery",
+  },
+  {
+    id: "jays-frozen-foods",
+    title: "Jays Frozen Foods",
+    category: "Graphic Design",
+    description:
+      "A product flyer for a frozen foods business, showcasing ready-to-cook meat and poultry products.",
+    tech: ["Adobe Photoshop", "Flyer Design"],
+    image: "jays-frozen-foods.jpg",
+    imageFolder: "gallery",
+  },
+  {
+    id: "kids-can-tech",
+    title: "Kids Can Tech 3.0",
+    category: "Graphic Design",
+    description:
+      "A program flyer for a kids' technology curriculum, laying out weekly highlights and enrollment details.",
+    tech: ["Adobe Photoshop", "Social Media Design"],
+    image: "kids-can-tech.jpg",
+    imageFolder: "gallery",
+  },
 ];
