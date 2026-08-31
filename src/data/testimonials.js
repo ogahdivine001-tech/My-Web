@@ -21,4 +21,11 @@ export const testimonials = [
       "Great attention to detail on both the design and the branding assets. Exactly what our business needed.",
     rating: 5,
   },
+  {
+    name: "Client Name",
+    role: "School Administrator",
+    quote:
+      "The school management platform made day-to-day admin work so much easier, from admissions to results. Support throughout was responsive and clear.",
+    rating: 5,
+  },
 ];
