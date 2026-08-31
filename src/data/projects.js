@@ -18,7 +18,7 @@ export const projects = [
       "A full-stack school management web app covering student, teacher, admissions, results, news, events, and messaging modules.",
     tech: ["React", "Vite", "Tailwind CSS", "Firebase", "Framer Motion"],
     image: "sacred-touch-schools.jpg",
-    live: "https://sacred-touch-schools.vercel.app",
+    live: "https://sacredtouchschools.vercel.app",
     source: "https://github.com/ogahdivine001-tech",
   },
   {
