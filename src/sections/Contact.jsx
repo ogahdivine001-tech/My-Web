@@ -3,6 +3,7 @@ import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 import RevealOnScroll from "../components/RevealOnScroll";
 
 const initialForm = { name: "", email: "", subject: "", message: "" };
+const WEB3FORMS_ACCESS_KEY = "9acaa86f-2857-412b-bc77-90b36137b77b";
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
@@ -33,19 +34,26 @@ export default function Contact() {
     setStatus({ state: "loading", message: "Sending your message..." });
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/ajax/ogahdivine001@gmail.com",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(form),
-        }
-      );
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          subject: form.subject || "New message from portfolio contact form",
+          message: form.message,
+        }),
+      });
 
-      if (!response.ok) throw new Error("Message failed");
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Message failed");
+      }
 
       setForm(initialForm);
       setStatus({
@@ -161,7 +169,9 @@ export default function Contact() {
             {status.message && (
               <p
                 className={`mt-4 text-sm font-medium ${
-                  status.state === "error" ? "text-coral" : "text-accent dark:text-accent-light"
+                  status.state === "error"
+                    ? "text-coral"
+                    : "text-accent dark:text-accent-light"
                 }`}
                 aria-live="polite"
               >
