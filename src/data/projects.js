@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "verve",
-    title: "Verve",
+    title: "Verve Store",
     category: "Web Development",
     description:
       "A full-stack e-commerce platform with product catalog, cart, wishlist, secure Paystack checkout, order tracking, and a full admin dashboard.",
@@ -33,13 +33,13 @@ export const projects = [
     source: "https://github.com/ogahdivine001-tech",
   },
   {
-    id: "glams-by-midhay",
-    title: "Glams by Midhay",
+    id: "glams-by-enny",
+    title: "Glams by enny",
     category: "Graphic Design",
     description:
       "A promotional flyer for a makeup and glam studio, covering bridal, birthday, and photoshoot looks.",
     tech: ["Adobe Photoshop", "Flyer Design"],
-    image: "glams-by-midhay.jpg",
+    image: "glams-by-enny.jpg",
     imageFolder: "gallery",
   },
   {

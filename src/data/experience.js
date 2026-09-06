@@ -23,4 +23,16 @@ export const experience = [
     text: "Completed secondary education at Allen High School.",
     type: "education",
   },
+  {
+    date: "2025",
+    title: "NECO, Allen High School",
+    text: "Wrote Internal exam at Allen High School.",
+    type: "education",
+  },
+  {
+    date: "2023",
+    title: "BECE/Junior WAEC, Allen High School",
+    text: "Completed junior secondary education at Allen High School.",
+    type: "education",
+  },
 ];

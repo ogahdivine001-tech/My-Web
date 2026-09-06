@@ -1,28 +1,28 @@
 // Placeholder testimonials, ready to be swapped for real client feedback.
 export const testimonials = [
   {
-    name: "Client Name",
+    name: "Okebe Monday",
     role: "Business Owner",
     quote:
       "Working together was smooth from start to finish. Communication was clear, and the final site looked exactly like what we discussed.",
     rating: 5,
   },
   {
-    name: "Client Name",
+    name: "Mrs Agnes",
     role: "Startup Founder",
     quote:
       "Delivered a clean, responsive site that loads fast and works great on mobile. Would work together again.",
     rating: 5,
   },
   {
-    name: "Client Name",
+    name: "Kaycodings",
     role: "Small Business Owner",
     quote:
       "Great attention to detail on both the design and the branding assets. Exactly what our business needed.",
     rating: 5,
   },
   {
-    name: "Client Name",
+    name: "Mrs A.Babigthon",
     role: "School Administrator",
     quote:
       "The school management platform made day-to-day admin work so much easier, from admissions to results. Support throughout was responsive and clear.",
