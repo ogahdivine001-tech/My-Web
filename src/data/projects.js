@@ -62,4 +62,22 @@ export const projects = [
     image: "kids-can-tech.jpg",
     imageFolder: "gallery",
   },
+  {
+    id: "businesshub",
+    title: "BusinessHub",
+    category: "Web Development",
+    description:
+      "An all-in-one platform for small businesses to sell online, with a storefront, invoices and receipts, WhatsApp order handling, an AI business assistant, and sales analytics.",
+    tech: [
+      "React",
+      "Node.js",
+      "Storefront",
+      "AI Assistant",
+      "WhatsApp Integration",
+    ],
+    image: "businesshub.jpg",
+    imageFolder: "gallery",
+    live: "https://businesshubng.vercel.app",
+    source: "https://github.com/ogahdivine001-tech",
+  },
 ];
